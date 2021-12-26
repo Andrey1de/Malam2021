@@ -31,10 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="readme.md" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Update="wwwroot\3rdpartylicenses.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
