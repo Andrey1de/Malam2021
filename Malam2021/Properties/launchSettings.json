@@ -17,7 +17,8 @@
     },
     "Malam2021": {
       "commandName": "Project",
-      "launchUrl": "swagger/index.html",
+      "launchBrowser": true,
+      "launchUrl": "index.html",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
