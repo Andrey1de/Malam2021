@@ -22,7 +22,8 @@ namespace Malam2021.Services
         public Department GetDepartment(int id);
         public Employee GetEmployee(int id);
         public TaskDo GetTaskDo(int id);
-      
+        
+
     }
 
 

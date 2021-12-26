@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Malam2021.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/employees")]
     [ApiController]
     public class EmployeesController : ControllerBase
     {
@@ -22,9 +22,13 @@ namespace Malam2021.Controllers
         }
         // GET: api/<EmployeesController>
         [HttpGet]
-        public List<Employee> Get()
+        public Employee[] Get()
         {
-            return dataAccessService.Employees.Values.ToList();
+            var ret = dataAccessService.Employees.Values
+                .OrderBy(emp => emp.EmployeeName).ToArray();
+         
+            return ret;
+
         }
 
         // GET api/<EmployeesController>/5

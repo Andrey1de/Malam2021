@@ -20,9 +20,10 @@ namespace Malam2021.Controllers
         }
         // GET: api/<DepartmentsController>
         [HttpGet]
-        public List<Department> Get()
+        public Department[] Get()
         {
-            return dataAccessService.Departments.Values.ToList();
+            var ret = dataAccessService.Departments.Values.ToArray();
+            return ret;
         }
 
         // GET api/<DepartmentsController>/5

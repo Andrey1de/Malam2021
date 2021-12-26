@@ -10,21 +10,22 @@ using System.Threading.Tasks;
 
 namespace Malam2021.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/tasks")]
     [ApiController]
-    public class TesksController : ControllerBase
+    public class TasksController : ControllerBase
     {
         private readonly IDataAccessService dataAccessService;
 
-        public TesksController(IDataAccessService _dataAccessService)
+        public TasksController(IDataAccessService _dataAccessService)
         {
             dataAccessService = _dataAccessService;
         }
         // GET: api/<TaskDosController>
         [HttpGet]
-        public List<TaskDo> Get()
+        public TaskDo[] Get()
         {
-            return dataAccessService.Tasks.Values.ToList();
+            var ret = dataAccessService.Tasks.Values.ToArray();
+            return ret;
         }
 
         // GET api/<TaskDosController>/5
