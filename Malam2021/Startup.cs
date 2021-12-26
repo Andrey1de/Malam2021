@@ -1,7 +1,6 @@
 using Malam2021.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,9 +22,9 @@ namespace Malam2021
         {
             services.AddCors(o => o.AddPolicy("AllCorsPolicy", builder =>
             {
-                builder.AllowAnyOrigin()
-                       .AllowAnyMethod()
-                       .AllowAnyHeader();
+                builder.WithOrigins("http://localhost:4200");
+                builder.AllowAnyMethod();
+                builder.AllowAnyHeader();
             }));
 
             services.AddControllersWithViews();
@@ -68,10 +67,10 @@ namespace Malam2021
             {
                 app.UseExceptionHandler("/Error");
             }
+            app.UseDefaultFiles();
 
             app.UseStaticFiles();
-            app.UseDefaultFiles("");
-            //if (!env.IsDevelopment())
+              //if (!env.IsDevelopment())
             //{
             //    app.UseSpaStaticFiles();
             //}
