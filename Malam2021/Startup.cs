@@ -28,7 +28,7 @@ namespace Malam2021
         {
             services.AddCors(o => o.AddPolicy("CustomCorsPolicy", builder =>
             {
-                builder.WithOrigins("http://localhost:4200");
+                builder.AllowAnyOrigin();// WithOrigins("http://localhost:4200");
                 builder.AllowAnyMethod();
                 builder.AllowAnyHeader();
             }));
