@@ -58,13 +58,20 @@ namespace Malam2021
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseCors("CustomCorsPolicy");
+            if (!env.IsDevelopment())
+            {
+                app.UseExceptionHandler("/Error");
+                app.UseHsts();
+            }
 
             //if (env.IsDevelopment())
             //{
-                app.UseDeveloperExceptionPage();
+            app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Malam2021 v1"));
+                app.UseSwaggerUI(c => 
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Malam2021 v1"));
             //}
+            app.UseHttpsRedirection();
             app.UseDefaultFiles();
 
             app.UseStaticFiles();
