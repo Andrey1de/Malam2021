@@ -18,14 +18,16 @@ namespace Malam2021
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            Startup.Configuration = configuration;
         }
-
-        public IConfiguration Configuration { get; }
+        // !! static IConfiguration Configuration { get; private set; }
+        public static IConfiguration Configuration { get; private set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+
             services.AddCors(o => o.AddPolicy("CustomCorsPolicy", builder =>
             {
                 builder.AllowAnyOrigin();// WithOrigins("http://localhost:4200");
@@ -33,7 +35,6 @@ namespace Malam2021
                 builder.AllowAnyHeader();
             }));
             services.AddControllersWithViews();
-            services.AddSingleton<IWebFileMapper, WebFileMapper>();
             services.AddSingleton<IDataAccessService, DataMokService>();
 
 
@@ -54,9 +55,11 @@ namespace Malam2021
                 });
             });
         }
-            // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public static IWebHostEnvironment Environment {get;private set;}
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            Environment = env;
             app.UseCors("CustomCorsPolicy");
             if (!env.IsDevelopment())
             {

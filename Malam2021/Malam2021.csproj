@@ -15,6 +15,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Extensions\HttpRequestExtensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="ClientApp\angular.json" />
+    <Content Remove="ClientApp\package.json" />
+    <Content Remove="ClientApp\tsconfig.app.json" />
+    <Content Remove="ClientApp\tsconfig.json" />
     <Content Remove="wwwroot\spa\3rdpartylicenses.txt" />
     <Content Remove="wwwroot\spa\favicon.ico" />
     <Content Remove="wwwroot\spa\index.html" />
@@ -1029,6 +1037,42 @@
     <None Include="ClientApp\.angular\cache\angular-webpack\ebebf0b8a83cc487ede09a01ae71c4837a6fb09b\5.pack" />
     <None Include="ClientApp\.angular\cache\angular-webpack\ebebf0b8a83cc487ede09a01ae71c4837a6fb09b\index.pack" />
     <None Include="ClientApp\.angular\cache\angular-webpack\ebebf0b8a83cc487ede09a01ae71c4837a6fb09b\index.pack.old" />
+    <None Include="ClientApp\angular.json" />
+    <None Include="ClientApp\node_modules\src\app\app.component.css" />
+    <None Include="ClientApp\node_modules\src\app\app.component.html" />
+    <None Include="ClientApp\node_modules\src\app\app.component.ts" />
+    <None Include="ClientApp\node_modules\src\app\app.module.ts" />
+    <None Include="ClientApp\node_modules\src\app\common\ApiModels.ts" />
+    <None Include="ClientApp\node_modules\src\app\common\ICRUD.ts" />
+    <None Include="ClientApp\node_modules\src\app\components\departments-tree\departments-tree.component.css" />
+    <None Include="ClientApp\node_modules\src\app\components\departments-tree\departments-tree.component.html" />
+    <None Include="ClientApp\node_modules\src\app\components\departments-tree\departments-tree.component.ts" />
+    <None Include="ClientApp\node_modules\src\app\components\departments-tree\example-data.ts" />
+    <None Include="ClientApp\node_modules\src\app\components\employee-finder\employee-finder.component.css" />
+    <None Include="ClientApp\node_modules\src\app\components\employee-finder\employee-finder.component.html" />
+    <None Include="ClientApp\node_modules\src\app\components\employee-finder\employee-finder.component.ts" />
+    <None Include="ClientApp\node_modules\src\app\components\tasks-table\tasks-table-datasource.ts" />
+    <None Include="ClientApp\node_modules\src\app\components\tasks-table\tasks-table.component.css" />
+    <None Include="ClientApp\node_modules\src\app\components\tasks-table\tasks-table.component.html" />
+    <None Include="ClientApp\node_modules\src\app\components\tasks-table\tasks-table.component.ts" />
+    <None Include="ClientApp\node_modules\src\app\layout\layout.component.css" />
+    <None Include="ClientApp\node_modules\src\app\layout\layout.component.html" />
+    <None Include="ClientApp\node_modules\src\app\layout\layout.component.ts" />
+    <None Include="ClientApp\node_modules\src\app\services\data-api.service.ts" />
+    <None Include="ClientApp\node_modules\src\assets\.gitkeep" />
+    <None Include="ClientApp\node_modules\src\environments\environment.prod.ts" />
+    <None Include="ClientApp\node_modules\src\environments\environment.ts" />
+    <None Include="ClientApp\node_modules\src\favicon.ico" />
+    <None Include="ClientApp\node_modules\src\index.html" />
+    <None Include="ClientApp\node_modules\src\main.ts" />
+    <None Include="ClientApp\node_modules\src\polyfills.ts" />
+    <None Include="ClientApp\node_modules\src\styles.css" />
+    <None Include="ClientApp\node_modules\src\swagger.ico" />
+    <None Include="ClientApp\node_modules\src\swagger_icon.png" />
+    <None Include="ClientApp\node_modules\src\test.ts" />
+    <None Include="ClientApp\package.json" />
+    <None Include="ClientApp\tsconfig.app.json" />
+    <None Include="ClientApp\tsconfig.json" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml.user" />
     <None Include="wwwroot\data\arc\customers.csv" />
     <None Include="wwwroot\data\arc\customers.xls" />
@@ -1104,5 +1148,21 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>React</TypeScriptJSXEmit>
+    <TypeScriptModuleKind />
+    <TypeScriptCompileOnSaveEnabled>False</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>True</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>True</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>False</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>False</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
 
 </Project>

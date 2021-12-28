@@ -1,4 +1,5 @@
-﻿using Malam2021.Models;
+﻿using Malam2021.Extensions;
+using Malam2021.Models;
 using Microsoft.AspNetCore.Hosting;
 using Newtonsoft.Json;
 using System;
@@ -29,11 +30,7 @@ namespace Malam2021.Services
 
     public class DataMokService : IDataAccessService
     {
-        IWebFileMapper mapper;
-        public DataMokService(IWebFileMapper _mapper)
-        {
-            mapper = _mapper;
-        }
+      
         
         #region Department
         ConcurrentDictionary<int, Department> _dicDepartments = null;
@@ -41,7 +38,7 @@ namespace Malam2021.Services
         {
             get
             {
-                var file = mapper.MapPath("departments.json");
+                var file = ServerEx.MapPath("~/data/json/departments.json");
                 
                 var hlp = new JsonHelper<Department>(file);
                 _dicDepartments = _dicDepartments ??
@@ -66,7 +63,7 @@ namespace Malam2021.Services
         {
             get
             {
-                var file = mapper.MapPath("employees.json");
+                var file = ServerEx.MapPath("~/data/json/employees.json");
                 var hlp = new JsonHelper<Employee>(file);
                 _dicEmployees = _dicEmployees ??
                     new ConcurrentDictionary<int, Employee>
@@ -92,7 +89,7 @@ namespace Malam2021.Services
         {
             get
             {
-                var file = mapper.MapPath("tasks.json");
+                var file = ServerEx.MapPath("~/data/json/tasks.json");
                  var hlp = new JsonHelper<TaskDo>(file);
                 _dicTasks = _dicTasks ??
                     new ConcurrentDictionary<int, TaskDo>
