@@ -25,8 +25,27 @@ namespace Malam2021.Controllers
         [HttpGet]
         public string Get(string file)
         {
+            file = file ?? "";
+            if (file.StartsWith("~/") || file.StartsWith("~\\"))
+            {
+                file = file.Substring(2);
+            } else if (file.StartsWith("/") || file.StartsWith("\\"))
+            {
+                file = file.Substring(1);
+            }
+
             var path = env.WebRootPath;
-            return Path.Combine(path, file);
+
+            if(path.Contains("\\")) {
+                file = file.Replace("/", "\\");
+                path += "\\" + file;
+            } 
+            else if (path.Contains("/"))
+            {
+                file = file.Replace("\\", "/");
+                path += "/" + file;
+            }
+            return path;
         }
 
         //// GET api/<WebRootPathController>/5
