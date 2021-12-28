@@ -11,6 +11,15 @@
 *.userprefs
 
 # Build results
+/dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# dependencies
+/.angular
+/node_modules
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
