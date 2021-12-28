@@ -1,0 +1,32 @@
+ [
+	{
+		"departmentId": "1",
+		"departmentName": "מחלקה 1",
+		"parentID": "0"
+	},
+	{
+		"departmentId": "2",
+		"departmentName": "מחלקה 2",
+		"parentID": "0"
+	},
+	{
+		"departmentId": "5",
+		"departmentName": "מחלקה 3",
+		"parentID": "0"
+	},
+	{
+		"departmentId": "6",
+		"departmentName": "תת מחלקה 3.1",
+		"parentID": "5"
+	},
+	{
+		"departmentId": "3",
+		"departmentName": "תת מחלקה 3.1.1",
+		"parentID": "6"
+	},
+	{
+		"departmentId": "4",
+		"departmentName": "מחלקה 4  ",
+		"parentID": "0"
+	}
+]

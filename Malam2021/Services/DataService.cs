@@ -41,7 +41,8 @@ namespace Malam2021.Services
         {
             get
             {
-                var file = mapper.MapPath("~/data/json/departments.json");
+                var file = mapper.MapPath("departments.json");
+                
                 var hlp = new JsonHelper<Department>(file);
                 _dicDepartments = _dicDepartments ??
                     new ConcurrentDictionary<int, Department>
@@ -65,7 +66,7 @@ namespace Malam2021.Services
         {
             get
             {
-                var file = mapper.MapPath("~/data/json/employees.json");
+                var file = mapper.MapPath("employees.json");
                 var hlp = new JsonHelper<Employee>(file);
                 _dicEmployees = _dicEmployees ??
                     new ConcurrentDictionary<int, Employee>
@@ -91,7 +92,7 @@ namespace Malam2021.Services
         {
             get
             {
-                var file = mapper.MapPath("~/data/json/tasks.json");
+                var file = mapper.MapPath("tasks.json");
                  var hlp = new JsonHelper<TaskDo>(file);
                 _dicTasks = _dicTasks ??
                     new ConcurrentDictionary<int, TaskDo>

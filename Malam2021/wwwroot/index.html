@@ -317,117 +317,118 @@
     </style>
     <style>
 
-            html,
-            body {
-                height: 100%;
-                margin: 0;
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .box-lay {
+            display: flex;
+            flex-flow: column;
+            height: 100%;
+        }
+
+            .box-lay .row-lay {
+                border: 1px dotted grey;
             }
 
-            .box-lay {
-                display: flex;
-                flex-flow: column;
-                height: 100%;
-            }
-
-                .box-lay .row-lay {
-                    border: 1px dotted grey;
-                }
-
-                    .box-lay .row-lay.header {
-                        flex: 0 1 auto;
-                        /* The above is shorthand for:
+                .box-lay .row-lay.header {
+                    flex: 0 1 auto;
+                    /* The above is shorthand for:
         flex-grow: 0,
         flex-shrink: 1,
         flex-basis: auto
         */
-                    }
-
-                    .box-lay .row-lay.content {
-                        flex: 1 1 auto;
-                    }
-
-                    .box-lay .row-lay.footer {
-                        flex: 0 1 40px;
-                    }
-
-            .spacer {
-                flex: 1;
-            }
-
-
-
-            .toolbar {
-                position: relative;
-                top: 0;
-                left: 0;
-                right: 0;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                background-color: #1976d2;
-                color: white;
-                font-weight: 600;
-            }
-
-                .toolbar img {
-                    margin: 0 16px;
                 }
 
-                .toolbar #twitter-logo {
-                    height: 40px;
-                    margin: 0 8px;
+                .box-lay .row-lay.content {
+                    flex: 1 1 auto;
                 }
 
-                .toolbar #swagger-logo {
-                    height: 40px;
-                    margin: 0 16px;
+                .box-lay .row-lay.footer {
+                    flex: 0 1 40px;
                 }
 
-                    .toolbar #twitter-logo:hover,
-                    .toolbar #swagger-logo:hover {
-                        opacity: 0.8;
-                    }
+        .spacer {
+            flex: 1;
+        }
 
-            .content {
-                position: relative;
-                display: flex;
-                margin: 20px 20px;
-                padding: 16 16px;
-                flex-direction: column;
-                align-items: center;
-                height: 100%;
+
+
+        .toolbar {
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            background-color: #1976d2;
+            color: white;
+            font-weight: 600;
+        }
+
+            .toolbar img {
+                margin: 0 16px;
             }
 
-            :host {
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-                font-size: 24px;
-                color: #333;
-                box-sizing: border-box;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
+            .toolbar #twitter-logo {
+                height: 40px;
+                margin: 0 8px;
             }
 
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
-                margin: 8px 0;
+            .toolbar #swagger-logo {
+                height: 40px;
+                margin: 0 16px;
             }
 
-
-            svg.material-icons {
-                height: 24px;
-                width: auto;
-            }
-
-                svg.material-icons:not(:last-child) {
-                    margin-right: 8px;
+                .toolbar #twitter-logo:hover,
+                .toolbar #swagger-logo:hover {
+                    opacity: 0.8;
                 }
+
+        .content {
+            position: relative;
+            display: flex;
+            margin: 20px 20px;
+            padding: 16 16px;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+        }
+
+        :host {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 24px;
+            color: #333;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 8px 0;
+        }
+
+
+        svg.material-icons {
+            height: 24px;
+            width: auto;
+        }
+
+        svg.material-icons:not(:last-child) {
+            margin-right: 8px;
+        }
+
     </style>
     <script>
-        //location.replace("spa/index.html");
+                //location.replace("spa/index.html");
     </script>
 </head>
 <body class="mat-typography">
@@ -441,7 +442,7 @@
             </a>
             <span>Welcome to SPA</span>
             <div class="spacer"></div>
-               <a aria-label="Angular on YouTube" target="_blank" rel="noopener" href="swagger/index.html" title="YouTube">
+            <a aria-label="Angular on YouTube" target="_blank" rel="noopener" href="swagger/index.html" title="YouTube">
                 <span style="color: white; font-size: 14px;"> Swagger API</span>
                 <svg id="swagger-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                     <title>swagger</title>

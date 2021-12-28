@@ -19,26 +19,30 @@ namespace Malam2021.Services
         public WebFileMapper(IWebHostEnvironment env)
         {
             _env = env;
-            WebRootPath = _env.WebRootPath.Replace('/', '\\');
+            WebRootPath = _env.WebRootPath;
+
          }
 
         public string MapPath(string relPath)
         {
-            relPath = relPath.Replace('/','\\');
+            string rett;
+           
             if (relPath.StartsWith("~\\"))
             {
-                return Path.Combine(WebRootPath, relPath.Substring(2));
+                rett = Path.Combine(WebRootPath, relPath.Substring(2));
             }
             else if (relPath.StartsWith("~"))
             {
-                return Path.Combine(WebRootPath, relPath.Substring(1));
+                rett = Path.Combine(WebRootPath, relPath.Substring(1));
             }
             else
             {
-                return Path.Combine(WebRootPath, relPath.Substring(1));
+                rett = Path.Combine(WebRootPath, relPath);
 
             }
 
+            Console.WriteLine($"MapPath({relPath}) => {rett}");
+            return rett;
 
         }
     }

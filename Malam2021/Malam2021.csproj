@@ -8,6 +8,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\data\**" />
+    <Content Remove="wwwroot\data\**" />
+    <EmbeddedResource Remove="wwwroot\data\**" />
+    <None Remove="wwwroot\data\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\spa\3rdpartylicenses.txt" />
+    <Content Remove="wwwroot\spa\favicon.ico" />
+    <Content Remove="wwwroot\spa\index.html" />
+    <Content Remove="wwwroot\spa\main.9f5057a84baa3fd3.js" />
+    <Content Remove="wwwroot\spa\polyfills.3bd9751094c4836b.js" />
+    <Content Remove="wwwroot\spa\runtime.16598625d6dce2ab.js" />
+    <Content Remove="wwwroot\spa\styles.70a1d93d40b60306.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="ClientApp\.angular\cache\babel-webpack\004722cc2c6437635d2d8352965c6d6d.json" />
     <Content Include="ClientApp\.angular\cache\babel-webpack\008a29cc2201188dd2f22ded78dd7b29.json" />
     <Content Include="ClientApp\.angular\cache\babel-webpack\01078b9333eeba6388780b9ac29042be.json" />
@@ -1013,6 +1030,27 @@
     <None Include="ClientApp\.angular\cache\angular-webpack\ebebf0b8a83cc487ede09a01ae71c4837a6fb09b\index.pack" />
     <None Include="ClientApp\.angular\cache\angular-webpack\ebebf0b8a83cc487ede09a01ae71c4837a6fb09b\index.pack.old" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml.user" />
+    <None Include="wwwroot\spa\3rdpartylicenses.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\spa\favicon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\spa\index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\spa\main.9f5057a84baa3fd3.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\spa\polyfills.3bd9751094c4836b.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\spa\runtime.16598625d6dce2ab.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\spa\styles.70a1d93d40b60306.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -1023,6 +1061,24 @@
 
   <ItemGroup>
     <Folder Include="Helpers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\departments.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\employees.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\favicon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\tasks.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
